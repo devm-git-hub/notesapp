@@ -1,0 +1,115 @@
+
+/* NotesApp component styles replacing Tailwind utilities */
+.notes-app {
+	height: 100vh;
+	background: #000;
+	color: #fff;
+}
+
+@media (min-width: 1024px) {
+	.notes-app {
+		display: flex;
+	}
+}
+
+.notes-form {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2.5rem;
+	width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.notes-form { width: 50%; }
+}
+
+.form-title {
+	font-size: 2.25rem;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+}
+
+.input, .textarea {
+	padding: 0.5rem 1.25rem;
+	width: 100%;
+	font-weight: 500;
+	border: 2px solid #ccc;
+	outline: none;
+	border-radius: 0.5rem;
+	background: transparent;
+	color: inherit;
+}
+
+.textarea { height: 8rem; resize: vertical; }
+
+.input:focus, .textarea:focus, .add-button:focus { outline: none; }
+
+.add-button {
+	background: #fff;
+	color: #000;
+	width: 100%;
+	padding: 0.5rem 1.25rem;
+	border-radius: 0.5rem;
+	font-weight: 500;
+	border: none;
+}
+.add-button:active { transform: scale(0.95); }
+
+.recent-column {
+	padding: 2.5rem;
+}
+@media (min-width: 1024px) {
+	.recent-column { width: 50%; border-left: 2px solid #e5e7eb; }
+}
+
+.recent-title { font-size: 2.25rem; font-weight: 700; }
+
+.notes-grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1.25rem;
+	margin-top: 1.5rem;
+	height: 90%;
+	overflow: auto;
+}
+
+.empty-text { color: #9ca3af; }
+
+.note-card {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	height: 13rem;
+	width: 10rem;
+	background-size: cover;
+	border-radius: 0.75rem;
+	color: #000;
+	padding-top: 2.25rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-image: url('https://static.vecteezy.com/system/resources/previews/037/152/677/non_2x/sticky-note-paper-background-free-png.png');
+}
+
+.note-title { line-height: 1.1; font-size: 1.125rem; font-weight: 700; }
+.note-details { margin-top: 0.5rem; line-height: 1.1; font-size: 0.75rem; font-weight: 600; color: #4b5563; }
+
+.delete-button {
+	width: 100%;
+	cursor: pointer;
+	background: #ef4444;
+	padding: 0.25rem 0;
+	font-size: 0.75rem;
+	border-radius: 0.25rem;
+	font-weight: 700;
+	color: #fff;
+	border: none;
+}
+.delete-button:active { transform: scale(0.95); }
+
